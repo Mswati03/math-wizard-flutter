@@ -97,7 +97,7 @@ class _HomePageState extends State<HomePage> {
                       );
                     }
 
-                    // +/- button
+                    // +/- buttons
                     else if (index == 1) {
                       return MyButton(
                         buttonText: buttons[index],
