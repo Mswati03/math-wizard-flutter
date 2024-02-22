@@ -76,15 +76,20 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.black54,
+        backgroundColor: Colors.lightBlue,
         appBar: AppBar(
-          elevation: 0,
+          elevation: 5,
           backgroundColor: Colors.black54,
-          leading: const Icon(Icons.settings, color: Colors.orange),
+          title: const Text("Math Wizard",
+          style: TextStyle(
+            fontSize: 20,
+            fontFamily: 'Inter',
+            color: Colors.white,
+          ),),
           actions: const [
             Padding(
               padding: EdgeInsets.only(top: 18.0),
-              child: Text('DEG', style: TextStyle(color: Colors.white38)),
+              child: Text('DEG', style: TextStyle(color: Colors.white24)),
             ),
             SizedBox(width: 20),
           ],
@@ -109,8 +114,7 @@ class _HomePageState extends State<HomePage> {
                                   textAlign: TextAlign.left,
                                   style: const TextStyle(
                                       color: Colors.white, fontSize: 80))),
-                          const Icon(Icons.more_vert,
-                              color: Colors.orange, size: 30),
+
                           const SizedBox(width: 20),
                         ],
                       ),
@@ -127,7 +131,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                           IconButton(
                             icon: const Icon(Icons.backspace_outlined,
-                                color: Colors.orange, size: 30),
+                                color: Colors.redAccent, size: 30),
                             onPressed: () {
                               buttonPressed("⌫");
                             },
@@ -213,9 +217,10 @@ class _HomePageState extends State<HomePage> {
                   ),
                   calcButton('=', Colors.orange, () => buttonPressed('=')),
                 ],
-              )
+              ),
             ],
           ),
+
         ),
 
     );
